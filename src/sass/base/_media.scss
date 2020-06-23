@@ -1,0 +1,129 @@
+@media (max-width: 991px) {
+    .container {
+        margin: 0 60px
+    } 
+    .promo {
+        &__header {
+            font-size: 40px;
+        }
+        &__subheader {
+            font-size: 23px;
+        }
+    }
+    .advantage {
+        &__item {
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 500px;
+    } 
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        :nth-child(3) {
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+
+    }
+    .promo {
+        &__wrapper {
+            display: block;
+        }
+        &__header { 
+            font-size: 35px;
+        }
+        &__subheader {
+          
+            margin-top: 10px;
+            font-size: 25px;
+    
+        }
+    }
+    .advantage {
+        max-height: 100%;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        } 
+        &__item {
+            margin-top: 30px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 400px;
+    }
+    .header {
+        &__official {
+            display: none;
+    }
+    &__logo {
+        margin: 0 auto;
+    }
+   }
+
+    .promo {
+        &__wrapper {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__header {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+        &__subheader {
+            margin-top: 5px;
+            font-size: 17px;
+            line-height: 18px;
+            text-align: center;
+        }
+        &__icons {
+            width: 108px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .button {
+            &_main {
+                width: 150px;
+                font-size: 13px;
+            }
+        }
+        &__link {
+                text-align: center;
+            }
+   
+        &__icon {
+            margin-top: 15px;
+        }
+
+    }
+    .advantage {
+        .title {
+            font-size: 25px;
+        }
+    }
+}
