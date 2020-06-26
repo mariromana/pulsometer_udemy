@@ -15,6 +15,16 @@
             max-width: 200px;
         }
     }
+    .title {
+        &_left {
+            font-size: 25px;
+        }
+    }
+    .consultation {
+        &__descr {
+            margin-top: 60px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -126,4 +136,8 @@
             font-size: 25px;
         }
     }
+    .feed-form {
+        width: 220px;
+     }
 }
+    
