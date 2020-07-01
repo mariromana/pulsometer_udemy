@@ -25,6 +25,16 @@
             margin-top: 60px;
         }
     }
+    .carousel {
+        &__inner {
+            width: 650px; 
+            img {
+                width: 100%;
+            }
+        
+        }
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -74,6 +84,19 @@
             font-size: 16px;
         }
     }
+    .carousel {
+        &__inner {
+            width: 400px;
+            img {
+                width: 100%;
+            }
+        .slick-dots {
+            width: 150px;
+        }
+        }
+    }
+  
+   
 
 }
 
@@ -139,5 +162,21 @@
     .feed-form {
         width: 220px;
      }
+
+
+     .carousel {
+        &__inner {
+            display: block;
+            margin: 0 auto;
+            max-width: 210px;
+            img {
+                width: 100%;
+            }
+        .slick-dots {
+            width: 100px;
+        }
+        }
+    }
 }
+
     
