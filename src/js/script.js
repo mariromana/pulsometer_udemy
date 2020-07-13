@@ -74,7 +74,8 @@ $(document).ready(function () {
 
 	});
 
-	
+	//валидация
+
 	function valideForms(form){
 		$(form).validate({
 			rules:{
@@ -95,11 +96,24 @@ $(document).ready(function () {
 				  },
 				phone: "Пожалуйста, введите свой номер телефона",
 				email: {
-				required: "Пожалуйста, введите свою почту",
-				email: "Ваша почта должна быть в формате name@domain.com"
+					required: "Пожалуйста, введите свою почту",
+					email: "Ваша почта должна быть в формате name@domain.com"
 					}
 	
-			 }
+			 },
+			 submitHandler: function() {
+				$.ajax({
+					type: "POST",
+					url: "mailer/smart.php",
+					data: $('#modal-form').serialize()
+				}).done(function() {
+					$('#modal-form').find("input").val("");   
+					$('#modal').fadeOut('fast');
+					$('#thanks').fadeIn('fast');
+					$('form').trigger('reset');
+				});
+				return false;
+			  }
 		 });
 
 	};
@@ -108,6 +122,27 @@ $(document).ready(function () {
 	valideForms('#order form')
 	
     $('input[name=phone]').mask("+7 (999) 999-99-99");
+	
 
+
+	
+	//smooth scroll  and pageup
+
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+
+	$("a[href^=#up]").click(function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});
+
+	new WOW().init();
+	
 
 });  
