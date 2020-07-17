@@ -29,19 +29,25 @@
         }
     }
 
-
-        
-
     .slick-dots {
-    /*     display: flex;
-        justify-content: space-between;
-        width: 150px;
-        transform: translateX(300px); */
         display: flex;
-        justify-content: space-between;
-        width: 200px;
-        margin: 0 auto;
-       
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding-inline-start: 0px;
+        margin-top: 20px;
+        .slick-active {
+            background-color: #212c36;
+        }
+        li {
+            border-radius: 100%;
+            background-color: $main_color;
+            width: 15px;
+            height: 15px;
+            margin: 0 10px;
+            button {
+                display: none;
+            }
+        }
     }
-
 }

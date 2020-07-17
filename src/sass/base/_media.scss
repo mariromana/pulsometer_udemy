@@ -1,6 +1,7 @@
 @media (max-width: 991px) {
     .container {
-        margin: 0 60px
+        margin: 0 60px;
+        
     } 
     .promo {
         &__header {
@@ -51,7 +52,19 @@
             margin: 0 10px;
         }
     }
+    .catalog {
+        &__tab {
+            width: 200px;
+        }
+        &__content {
+            justify-content: center;
+        }
+    }
+    .catalog-item {
+        margin: 0px 5px 10px 5px;
+    }
 
+    
 
 
 
@@ -106,38 +119,17 @@
     }
     .carousel {
         &__inner {
-            width: 400px;
+            width: 100%;
             img {
                 width: 100%;
             }
-        .slick-dots {
-            width: 150px;
-        }
         }
     }
     .catalog {
-        &__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        &__tabs {
-            flex-direction: column;
-            align-content: center;
-        }
         &__tab {
-            font-size: 15px;
-        }
-        .title {
-            font-size: 25px;
-        }
-        &-item {
-            width: 280px;
+            font-size: 16px;
         }
     }
-
-
-
     .feed {
         &__item {
             flex-direction: column;
@@ -161,7 +153,7 @@
 
     .footer {
         &__info {
-            width: 330px;
+            width: 320px;
             height: 220px;
         }
         &__addr {
@@ -182,6 +174,10 @@
 @media (max-width: 575px) {
     .container {
         max-width: 400px;
+        
+    }
+    .title {
+        font-size: 22px;
     }
     .header {
         &__official {
@@ -191,6 +187,13 @@
         margin: 0 auto;
     }
    }
+   .catalog {
+        &__tabs {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 170px;
+    }
+}
 
     .promo {
         &__wrapper {
@@ -203,7 +206,7 @@
         &__header {
             text-align: center;
             margin-bottom: 15px;
-            font-size: 30px;
+            font-size: 25px;
         }
         &__subheader {
             margin-top: 5px;
@@ -233,29 +236,22 @@
         }
 
     }
-    .advantage {
-        .title {
-            font-size: 25px;
-        }
-    }
     .feed-form {
         width: 220px;
      }
 
 
-     .carousel {
+   .carousel {
         &__inner {
-            display: block;
-            margin: 0 auto;
-            max-width: 210px;
+            max-width: 100%;
             img {
                 width: 100%;
             }
-        .slick-dots {
-            width: 100px;
+      
         }
-        }
-    }
+    } 
+   
+    
 
     .feed {
         &__text {
